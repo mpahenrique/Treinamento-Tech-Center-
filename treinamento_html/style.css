@@ -1,0 +1,17 @@
+div h2{
+	color: #00CCFF;
+}
+
+h2{
+	text-transform: uppercase;
+	color: red;
+}
+
+th{
+	background: #cccccc;
+	width: 180px;
+}
+
+table{
+	border: 3px solid #cccccc;
+}
