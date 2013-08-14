@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	   window.onload = function(){
+           
+           meuItens = document.querySelectorAll("article");
+           
+           for(var i = 0; i < meuItens.length; i++){
+            meuItens[i].addEventListener("click",function(e){
+                this.dataset.ativo = true
+                console.log(this);
+            })   
+           }
+	   
+	   }
+	</script>
+	
+    <style>
+		article{
+			margin: 20px 2%;
+			width: 86%;
+			padding: 5%;
+			border-radius:20px;
+			background-color: #ccc;
+		}
+		article[data-ativo="true"] div.foto {
+		    opacity:1;
+		    height: 300px;
+		}
+        
+        article[data-ativo="false"] div.foto {
+            opacity:0;
+		    height: 0;
+        }
+		article header {
+			height: 30px;
+			border-radius: 20px;
+			background-color:#333;
+			margin:10px;
+			
+		}
+
+		article div.foto{
+			background-color: #cccc00;
+			transition: all 500ms linear;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<article data-ativo="false">
+				<header></header>
+				<div class="foto"></div>
+		</article>
+			
+		<article data-ativo="false">
+			<header></header>
+			<div class="foto"></div>
+		</article>
+		
+		<article data-ativo="false">
+			<header></header>
+			<div class="foto"></div>
+		</article>	
+	</section>
+	
+
+</body>
+</html>

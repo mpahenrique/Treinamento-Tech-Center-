@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        .logo{
+            text-transform:uppercase;
+            color:green;
+        }
+        
+        div.item:hover, span:hover{
+            background:green;
+            border-radius: 0px;
+            height: 400px;
+        }
+        
+        div.item:hover:after{
+            content:"Duilio";
+        }
+        
+        .topo{
+          background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#fff)) repeat-X;
+ 
+        }
+        
+        .rodape .logo{
+            font-size:14px;
+        }
+        
+        .topo .logo{
+            text-decoration:underline;
+        }
+       
+        #meu-id{
+           border-color:blue; 
+        }
+        
+        #meu-id .item{
+            background:#ccc;
+        }
+        div{
+          border: 10px solid #333;
+          border-radius:20px;
+          padding:10px;
+          margin:10px; 
+          height:200px;
+          transition: 500ms all linear; 
+        }
+        
+        .item{
+           border-color:red; 
+        }
+        
+       
+    </style>
+</head>
+<body>
+    
+    <div class="topo"> 
+        <h1 class="logo">Tech Center São Paulo</h1>
+    </div>
+    
+    <div id="meu-id" class="item">
+        <div class="item">
+            <div class="sub-item"></div>
+        </div>
+    </div>
+    
+    <span class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, adipisci, nisi consequuntur eius mollitia quidem tempore nobis vel nulla facilis commodi recusandae ipsa fugit ratione ut modi quae tenetur consequatur.</span>
+    <div class="rodape">
+        <h1 class="logo">Tech Center São Paulo</h1>
+    </div>
+    
+</body>
+</html>

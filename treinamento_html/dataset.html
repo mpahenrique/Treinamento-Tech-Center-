@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#clique{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="clique" sobrenome="Cintra" data-nome="Fellyph" >
+	</div>
+
+	<strong>Nome:</strong> <span id="nome"></span>
+	<script>
+		var minhaDiv = document.getElementById("clique");
+
+		minhaDiv.addEventListener("click",function(){
+			console.log(this.dataset.nome)
+
+			document.getElementById("nome").textContent = this.dataset.nome + " " + this.getAttribute("sobrenome")	
+		});
+
+	</script>
+</body>
+</html>
