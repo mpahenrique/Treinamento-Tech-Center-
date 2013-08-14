@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificando atributos</title>
+    
+    <script>
+       // var elementos = null;
+        
+        window.onload = function(){
+             window.elementos = document.getElementById("itens").querySelectorAll("div")
+            
+            for(var i= 0; i < elementos.length; i++){
+                elementos[i].addEventListener("click",function(){
+                    
+            /*
+            (this.setAttribute("class" , (this.getAttribute("class") == "on")? "off":"on")
+            elementos[this.dataset.id].setAttribute("class","on")
+            */
+                    if(this.getAttribute("class") == "on"){
+                        this.setAttribute("class","off");
+                    }else{
+                        this.setAttribute("class","on");
+                    }
+                    
+                })
+                
+                //log(item.getAttribute("class"));
+            }
+            
+        }
+    </script>
+    <style>
+        .on, 
+        .off{
+            width:10%;
+            height:100px;
+            margin:2%;
+            border-radius:50%;
+            float:left;
+            transition:1s all;
+        }
+        
+        .off{
+            background:red;
+        }
+        
+        .on{
+            background:green;
+        }
+        
+        .on span{
+            display:block;
+        }
+        
+        .off span{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+   <div id="itens">
+       <div class="off" data-id="1"><span>Oi</span></div>
+       <div class="on" data-id="2"><span>Oi</span></div>
+       <div class="on" data-id="3"><span>Oi</span></div>
+       <div class="off" data-id="4"><span>Oi</span></div>
+       <div class="on" data-id="5"><span>Oi</span></div>
+       <div class="on"></div>
+       <div class="off"></div>    
+   </div>
+    
+    <div>Duilio</div>
+    
+</body>
+</html>
